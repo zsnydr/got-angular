@@ -7,8 +7,16 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-app>
-    <nav></nav>
-    <div ng-view></div>
+  <body ng-app="App">
+    <nav>
+      <div>
+        <a ui-sref="#">GoT Angular</a>
+      </div>
+      <ul>
+        <li><a ui-sref="houses">Houses</a></li>
+        <li><a ui-sref="characters">Characters</a></li>
+      </ul>
+    </nav>
+    <div ui-view></div>
   </body>
 </html>
