@@ -1,6 +1,5 @@
 angular.module('App', ['ui.router', 'App.Pokemon', 'App.Services'])
 .config(($stateProvider, $urlRouterProvider) => {
-
   $urlRouterProvider.otherwise('/');
 
   const homeState = {

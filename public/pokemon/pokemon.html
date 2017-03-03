@@ -1,5 +1,12 @@
-<aside>
-  <input type="text" data-ng-model="query" />  
-  <div data-ng-repeat="pokemon in PokeCtrl.pokemons | filter:query">{{ pokemon.name }}</div>
+<article class="pokemon-active">
+  <div><img data-ng-src="{{ PokeCtrl.active.sprites.front_default }}" /></div>
+</article>
+<aside class="pokemon-search">
+  <div>
+    <input type="text" data-ng-model="query" />  
+    <div data-ng-repeat="pokemon in PokeCtrl.pokemons | filter:query">
+      <div data-ng-click="PokeCtrl.selectPokemon(pokemon)">{{ pokemon.name }}</div>
+    </div>
+  </div>
 </aside>
 

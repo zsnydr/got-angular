@@ -1,0 +1,9 @@
+.pokemon-active {
+  width: 30%;
+  display: inline-block;
+}
+
+.pokemon-search {
+  width: 30%;
+  display: inline-block;
+}
