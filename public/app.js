@@ -1,20 +1,21 @@
-const App = angular.module('App', ['ui.router', 'HousesController', 'CharactersController']);
+angular.module('App', ['ui.router', 'App.Pokemon', 'App.Services'])
+.config(($stateProvider, $urlRouterProvider) => {
 
-App.config(($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/');
-  $stateProvider
-    .state('/', {
-      url: '/',
-      templateUrl: 'home.html'
-    })
-  .state('houses', {
-    url: '/houses',
-    templateUrl: 'houses.html',
-    controller: 'HousesController'
-  })
-  .state('characters', {
-    url: '/characters',
-    templateUrl: 'characters.html',
-    controller: 'CharactersController'
-  });
+
+  const homeState = {
+    name: 'home',
+    url: '/',
+    templateUrl: 'home.html'
+  };
+
+  const pokemonState = {
+    name: 'pokemon',
+    url: '/pokemon',
+    templateUrl: 'pokemon/pokemon.html',
+    controller: 'PokemonController'
+  };
+
+  $stateProvider.state(homeState);
+  $stateProvider.state(pokemonState);
 });

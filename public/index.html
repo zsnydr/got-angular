@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>GoT Angular</title>
+    <title>Poke Angular</title>
+    <meta charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="services/services.js"></script>
+    <script src="pokemon/pokemonController.js"></script>
     <script src="app.js"></script>
   </head>
   <body ng-app="App">
     <nav>
       <div>
-        <a ui-sref="#">GoT Angular</a>
+        <a ui-sref="home">Poke Angular</a>
       </div>
       <ul>
-        <li><a ui-sref="houses">Houses</a></li>
-        <li><a ui-sref="characters">Characters</a></li>
+        <li><a ui-sref="pokemon">Houses</a></li>
       </ul>
     </nav>
     <div ui-view></div>
