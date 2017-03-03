@@ -1,1 +1,5 @@
-<div ng-repeat="mon in pokemon">{{ mon.name }}</div>
+<aside>
+  <input type="text" data-ng-model="query" />  
+  <div data-ng-repeat="pokemon in PokeCtrl.pokemons | filter:query">{{ pokemon.name }}</div>
+</aside>
+

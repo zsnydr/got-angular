@@ -13,7 +13,7 @@ angular.module('App', ['ui.router', 'App.Pokemon', 'App.Services'])
     name: 'pokemon',
     url: '/pokemon',
     templateUrl: 'pokemon/pokemon.html',
-    controller: 'PokemonController'
+    controller: 'PokemonController as PokeCtrl'
   };
 
   $stateProvider.state(homeState);
